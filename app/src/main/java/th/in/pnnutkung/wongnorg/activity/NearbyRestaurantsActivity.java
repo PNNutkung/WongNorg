@@ -1,9 +1,13 @@
 package th.in.pnnutkung.wongnorg.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -30,8 +34,19 @@ public class NearbyRestaurantsActivity extends AppCompatActivity {
             restaurantNameList.add(r.getName());
         }
         String[] lv_arr = restaurantNameList.toArray(new String[restaurantNameList.size()]);
-        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.activity_listview,lv_arr);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.activity_listview,lv_arr);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(NearbyRestaurantsActivity.this, RestaurantDetailActivity.class);
+                String select = (listView.getItemAtPosition(position).toString());
+                Log.e("AdapterView",select);
+                intent.putExtra("resName",select);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
