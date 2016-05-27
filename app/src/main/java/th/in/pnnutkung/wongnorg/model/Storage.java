@@ -12,8 +12,9 @@ public class Storage {
 
     private Storage(){
         restaurantsList = new ArrayList<Restaurant>();
-        restaurantsList.add(new Restaurant("Coco Ichibanya","Japanese",4.5f,"02-636-1050","The famous curry house from Japan with 30 years experience in Japanese food business, offers varieties of Japanese Curry with unique and creative style along with the best quality ingredient to make tasty curry."));
+        restaurantsList.add(new Restaurant("Coco Ichibanya","Japanese",3.75f,"02-636-1050","\"CoCoICHIBANYA\" the famous curry house from Japan with 36 years experience in Japanese food business, offers varieties of Japanese Curry with unique and creative style along with the best quality ingredient to make tasty curry."));
         restaurantsList.add(new Restaurant("Gold Curry","Japanese",3.25f,"02-662-5003","ご当地グルメ、人気の金沢カレーがバンコク初上陸！金沢カレー特有の濃厚なカレーをぜひ、ご堪能ください！"));
+        restaurantsList.add(new Restaurant("Maria Pizzeria & Restaurant","Italian",4.1f,"089-455-9477","\"Best of the Best\" จาก สสว. โครงการยกระดับคุณภาพมาตรฐานของอาหารไทย และร้านอาหารไทย อาหารสไตล์อิตาเลียน , เวียดนาม , ไทย , จีน และ มังสวิรัติ"));
     }
 
     public static Storage getInstance(){
