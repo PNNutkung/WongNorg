@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.RestaurantDetailActivity" />
-        <activity android:name=".activity.NearbyRestaurantsActivity"></activity>
+        <activity android:name=".activity.NearbyRestaurantsActivity" />
+        <activity android:name=".activity.RandomRestaurant"></activity>
     </application>
 
 </manifest>

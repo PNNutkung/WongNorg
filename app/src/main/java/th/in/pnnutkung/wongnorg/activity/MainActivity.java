@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -26,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ButterKnife.bind(this);
+        final TextView randomRestaurant = (TextView)findViewById(R.id.homeRandomTextView);
+        randomRestaurant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("Random Restaurants","Click!");
+                Intent randomRestaurants = new Intent(MainActivity.this, RandomRestaurant.class);
+                startActivity(randomRestaurants);
+            }
+        });
     }
 
     @Override
