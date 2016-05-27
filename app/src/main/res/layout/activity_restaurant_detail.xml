@@ -20,20 +20,23 @@
             android:layout_height="wrap_content"
             android:id="@+id/restaurantName"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/cuisine" />
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cuisine"
             android:layout_below="@+id/restaurantName"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"/>
 
         <RatingBar
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:id="@+id/ratingBar"
             android:layout_below="@+id/cuisine"
+            android:isIndicator="true"
             android:layout_alignParentStart="true" />
 
         <TextView
@@ -42,19 +45,29 @@
             android:id="@+id/callText"
             android:text="Call: "
             android:layout_below="@id/ratingBar"
+            android:textSize="20sp"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/call"
             android:layout_below="@+id/ratingBar"
-            android:layout_toRightOf="@+id/callText"/>
-
+            android:layout_toRightOf="@+id/callText"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/call"
+            android:id="@+id/aboutText"
+            android:text="About:"
+            android:textSize="20sp"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/about"
-            android:layout_below="@+id/call" />
+            android:layout_below="@+id/aboutText"
+            android:textSize="15sp"/>
 
     </RelativeLayout>
 

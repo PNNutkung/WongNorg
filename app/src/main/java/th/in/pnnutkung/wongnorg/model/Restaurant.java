@@ -6,11 +6,11 @@ package th.in.pnnutkung.wongnorg.model;
 public class Restaurant {
     private String name;
     private String cuisine;
-    private double star;
+    private float star;
     private String call;
     private String about;
 
-    public Restaurant(String name, String cuisine, double star, String call, String about){
+    public Restaurant(String name, String cuisine, float star, String call, String about){
         this.name = name;
         this.cuisine = cuisine;
         this.star = star;
@@ -27,7 +27,7 @@ public class Restaurant {
         this.cuisine = cuisine;
     }
 
-    public void setStar(double star) {
+    public void setStar(float star) {
         this.star = star;
     }
 
@@ -48,7 +48,7 @@ public class Restaurant {
         return cuisine;
     }
 
-    public double getStar() {
+    public float getStar() {
         return star;
     }
 

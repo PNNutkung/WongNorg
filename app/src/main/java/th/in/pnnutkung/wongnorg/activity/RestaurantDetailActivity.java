@@ -24,7 +24,8 @@ public class RestaurantDetailActivity extends AppCompatActivity {
         TextView cuisine = (TextView)findViewById(R.id.cuisine);
         cuisine.setText(res.getCuisine());
         RatingBar rate = (RatingBar)findViewById(R.id.ratingBar);
-        rate.setNumStars((int)res.getStar());
+        rate.setNumStars(5);
+        rate.setRating(res.getStar());
         TextView call = (TextView)findViewById(R.id.call);
         call.setText(res.getCall());
         TextView about = (TextView)findViewById(R.id.about);
