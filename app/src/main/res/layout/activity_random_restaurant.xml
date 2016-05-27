@@ -12,9 +12,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Not Available Now!"
-        android:id="@+id/notAvailable"
+        android:id="@+id/randomRestaurantName"
+        android:text="Press Random!"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/randomRandomButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random!"
+        android:id="@+id/randomRandomButton"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30sp"/>
+        android:onClick="randomRestaurant"
+        />
 </RelativeLayout>
